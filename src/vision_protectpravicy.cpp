@@ -11,7 +11,7 @@ ProtectPravicy::ProtectPravicy(std::string config)
 ProtectPravicy::ProtectPravicy(ModelInfo model_info)
 {
     m_modelinfo = model_info;
-
+    
 
 }
 
