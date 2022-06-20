@@ -1,19 +1,26 @@
 #include "vision_protectpravicy.hpp"
 
 
+ProtectPravicy::ProtectPravicy(std::string config)
+{
+    // parse model_info
 
 
-bool ProtectPravicy::ProtectPravicy(std::string config)
+}
+
+ProtectPravicy::ProtectPravicy(ModelInfo model_info)
+{
+    m_modelinfo = model_info;
+
+
+}
+
+ProtectPravicy::~ProtectPravicy()
 {
 
 
 }
 
-bool ProtectPravicy::~ProtectPravicy()
-{
-
-
-}
 
 
 bool ProtectPravicy::removePersonalInfo()
