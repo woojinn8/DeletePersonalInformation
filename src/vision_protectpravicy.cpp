@@ -1,5 +1,5 @@
 #include "vision_protectpravicy.hpp"
-
+#include "ncnn/ncnn_detector.hpp"
 
 ProtectPravicy::ProtectPravicy(std::string config)
 {
@@ -10,7 +10,11 @@ ProtectPravicy::ProtectPravicy(std::string config)
 
 ProtectPravicy::ProtectPravicy(ModelInfo model_info)
 {
-    m_modelinfo = model_info;
+    std::shared_ptr<Detector> pDetector = NULL;
+    if(model_info.framework == "ncnn")   // NCNN Mode
+    {
+        pDetector = std::make_shared<NCNNEngine::Detector_NCNN>(model_info);
+    }
     
 
 }
