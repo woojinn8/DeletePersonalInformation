@@ -26,8 +26,8 @@ int main(int argc, char** argv)
     config.model_param = model_param;
     config.model_bin = model_bin;
 
-    config.image_width = width;
-    config.image_height = width;
+    config.image_process_width = width;
+    config.image_process_height = width;
 
     config.score_threshold = score_thrshold;
     config.iou_threshold = iou_threshold;
